@@ -1,7 +1,9 @@
+"use client"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { CalendarDays, Clock, ArrowRight } from "lucide-react"
+import { CalendarDays, Clock, ArrowRight, ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import { useRouter } from 'next/navigation';
 
 // Dummy data for blog posts
 const blogPosts = [
@@ -36,9 +38,18 @@ const blogPosts = [
 ]
 
 export default function BlogList() {
+  const router = useRouter();
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-900 text-gray-100">
+    <section className="w-full py-12  bg-gray-900 text-gray-100">
+        
       <div className="container px-4 md:px-6 max-w-3xl mx-auto">
+      <Button 
+        onClick={() => router.back()}
+          variant="ghost" 
+          className="mb-4 text-gray-300 hover:bg-gray-800 hover:text-gray-100"      
+        >
+          <ArrowLeft className="mr-2 h-4 w-4"  /> Back to Home
+        </Button>
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">Latest Blog Posts</h2>
         <div className="space-y-10">
           {blogPosts.map((post) => (

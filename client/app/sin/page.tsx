@@ -1,16 +1,20 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Calendar, Clock } from "lucide-react"
+import { useRouter } from 'next/navigation';
 
 export default function Component() {
+  const router = useRouter();
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
         <Button 
+        onClick={() => router.back()}
           variant="ghost" 
-          className="mb-4 text-gray-300 hover:bg-gray-800 hover:text-gray-100"
-        
+          className="mb-4 text-gray-300 hover:bg-gray-800 hover:text-gray-100"      
         >
-          <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
+          <ArrowLeft className="mr-2 h-4 w-4"  /> Back to Blog
         </Button>
         
         <article className="bg-gray-800 rounded-lg overflow-hidden">
