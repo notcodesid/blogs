@@ -17,7 +17,7 @@ export default function Home() {
               Welcome to My Dev Journey
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
-              Exploring code, sharing knowledge, and building the future. Join me as we dive into the world of software development.
+              Exploring code, sharing knowledge, and building the future. 
             </p>
           </div>
           <div className="w-full max-w-sm space-y-2">
