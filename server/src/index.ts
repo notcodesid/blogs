@@ -1,9 +1,12 @@
-import { Hono } from 'hono'
+import { Hono } from 'hono';
+import { blogRouter } from './router/blogRouter';
 
-const app = new Hono()
+const app = new Hono();
 
 app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+  return c.text('hello hono');
+});
 
-export default app
+app.route('/blog', blogRouter);
+
+export default app;
