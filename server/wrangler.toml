@@ -1,9 +1,12 @@
 name = "bloggingapp"
 compatibility_date = "2024-08-27"
 
-# [vars]
-# MY_VAR = "my-variable"
+[vars]
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZDljODIzOWYtYTg1OC00YTY3LWJkMTQtNTdkOTZhNmMyMzhhIiwidGVuYW50X2lkIjoiZmVmNWJmY2RmZThlNzdiM2ZhNjU3NzI3NDI3OTVkZThjZjEzNjgyOGJmZTUyMGM3ZDc3OTU2YjZiNzE3YmNiMSIsImludGVybmFsX3NlY3JldCI6IjJkMzA5Y2M0LThlMjgtNGM0ZS04MTZkLTU1NmFlODIxNmRkMSJ9.SK4vfMIJ8tSG-1ZU5-m2F1jB_1UTCbPc1bYY1Ee_IuM"
 
+
+
+MY_VAR = "my-variable"
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
 # id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
