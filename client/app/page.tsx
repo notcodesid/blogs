@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import Link from "next/link"
 
 export default function Home() {
+  
   return (
     <>
     <section className="w-full min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100 relative">
