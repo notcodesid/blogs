@@ -8,8 +8,10 @@ datasource db {
 }
 
 model Blog {
-  id        Int     @id @default(autoincrement())
-  content   String
-  title     String
-  published Boolean @default(false)
+  id          Int      @id @default(autoincrement())
+  content     String
+  title       String
+  published   Boolean  @default(false)
+  date        DateTime @default(now())
+  readingTime Int
 }
