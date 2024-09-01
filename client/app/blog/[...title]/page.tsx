@@ -1,33 +1,21 @@
 "use client";
-import { useParams } from "next/navigation";
-import { useBlog } from "../../hooks/";
+
+import { useParams } from 'next/navigation';
+import { useBlog } from "../../hooks/index";
 import { FullBlog } from "@/components/FullBlog";
 
 export default function Page() {
-    const { id } = useParams();
-
-    // Ensure `id` is a string
-    const blogId = Array.isArray(id) ? id[0] : id;
-    console.log(blogId)
+    const params = useParams();
+    const id = Array.isArray(params.id) ? params.id[0] : params.id; // Ensure `id` is a string
 
     const { loading, blog } = useBlog({
-        id: blogId || ""
+        id: id || "" // Pass the `id` as a string
     });
 
-    if (loading) {
-        return (
-            <div>
-                Loading...
-            </div>
-        );
-    }
+    console.log(id);
 
-    if (!blog) {
-        return (
-            <div>
-                Blog not found.
-            </div>
-        );
+    if (loading || !blog) {
+        return <div>Loading...</div>;
     }
 
     return (

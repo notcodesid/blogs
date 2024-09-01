@@ -43,7 +43,6 @@ export const useBlog = ({ id }: { id: string }) => {
         .then(response => {
             setBlog(response.data.blog);
             console.log(response.data.blog)
-            console.log(`${BACKEND_URL}blog/${id}`)
                 setLoading(false);
             })
             .catch(error => {
