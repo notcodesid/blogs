@@ -1,4 +1,5 @@
-import { ArrowRight, CalendarDays, Clock, Link } from "lucide-react";
+import { ArrowRight, CalendarDays, Clock} from "lucide-react";
+import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -27,12 +28,12 @@ export function BlogCard({title , content , publishedDate , readingTime, id} : B
                   <Clock className="ml-4 mr-1 h-4 w-4" />
                   <span>{`${readingTime}`} min </span>
                 </div>
-                <Button asChild variant="ghost" className="text-gray-300 hover:text-gray-100">
                   <Link href={`/blog/${id}`}>
-                    Read More
+                <Button className="text-gray-300 bg-transparent hover:bg-slate-400">
+                    Read more
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
                 </Button>
+                  </Link>
               </CardFooter>
             </Card>
 

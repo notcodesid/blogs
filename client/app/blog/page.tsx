@@ -34,6 +34,7 @@ export default function BlogList() {
         <div className="space-y-10">
 
         {blogs.map(blog => <BlogCard
+          key={blog.id}
           id={blog.id}
           title={blog.title}
           content={blog.content}
