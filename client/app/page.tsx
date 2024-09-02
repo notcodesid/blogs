@@ -34,7 +34,7 @@ export default function Home() {
           </div>
           <div className="space-x-4">
             <Button asChild variant="outline" className="bg-gray-700 hover:bg-gray-600">
-              <Link href="/blogs">Read My Blog</Link>
+              <Link href="/blog">Read My Blog</Link>
             </Button>
             <Button asChild variant="outline" className="bg-gray-700 hover:bg-gray-600">
               <Link href="/about">About Me</Link>
