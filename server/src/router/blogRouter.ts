@@ -88,6 +88,8 @@ blogRouter.get('/:id', async (c) => {
                 id: true,
                 title: true,
                 content: true,
+                readingTime:true,
+                date:true
             }
         })
     

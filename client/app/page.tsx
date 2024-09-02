@@ -46,7 +46,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent" />
     </section>
 
-<DotPattern
+  <DotPattern
 className={cn(
   "[mask-image:radial-gradient(700px_circle_at_center,white,transparent)]",
 )}
