@@ -1,11 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 
 export default function CreateBlog() {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
+  const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -16,9 +17,16 @@ export default function CreateBlog() {
     setContent('')
   }
 
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto'
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`
+    }
+  }, [content])
+
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 p-4">
-      <form onSubmit={handleSubmit} className="max-w-4xl mx-auto space-y-6">
+    <div className="min-h-screen bg-gray-900 text-gray-100">
+      <form onSubmit={handleSubmit} className="max-w-3xl mx-auto px-4 py-8 space-y-6">
         <input
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -26,12 +34,13 @@ export default function CreateBlog() {
           className="w-full bg-transparent text-4xl font-light text-gray-300 placeholder-gray-500 focus:outline-none"
         />
         <textarea
+          ref={textareaRef}
           value={content}
           onChange={(e) => setContent(e.target.value)}
           placeholder="Tell your story..."
-          className="w-full bg-transparent text-xl text-gray-300 placeholder-gray-500 focus:outline-none min-h-[calc(100vh-200px)] resize-none"
+          className="w-full bg-transparent text-xl text-gray-300 placeholder-gray-500 focus:outline-none resize-none overflow-hidden"
         />
-        <div className="fixed top-4 right-4">
+        <div className="pt-6">
           <Button type="submit" className="bg-green-600 hover:bg-green-700 text-white">
             Publish
           </Button>
