@@ -8,7 +8,7 @@ export default function Home() {
   
   return (
     <>
-    <section className="w-full min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100 relative">
+    <section className="w-full h-[80vh] flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100 relative">
       
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center space-y-4 text-center">
