@@ -7,6 +7,19 @@ export function SkeletonCard() {
         <Skeleton className="h-8 w-[300px] md:w-[780px] " />
         <Skeleton className="h-4  w-[300px] md:w-[780px]" />
         <Skeleton className="h-4  w-[300px] md:w-[780px]" />
+        <br />
+        <Skeleton className="h-4  w-[300px] md:w-[780px]" />
+        <Skeleton className="h-4  w-[300px] md:w-[780px]" />
+        <br />
+        <Skeleton className="h-4  w-[300px] md:w-[780px]" />
+        <Skeleton className="h-4  w-[300px] md:w-[780px]" />
+        <br />
+        <Skeleton className="h-4  w-[300px] md:w-[780px]" />
+        <Skeleton className="h-4  w-[300px] md:w-[780px]" />
+        <Skeleton className="h-4  w-[300px] md:w-[780px]" />
+        <br />
+        <Skeleton className="h-4  w-[300px] md:w-[780px]" />
+        <Skeleton className="h-4  w-[300px] md:w-[780px]" />
         <Skeleton className="h-4  w-[300px] md:w-[780px]" />
       </div>
     </div>
