@@ -36,9 +36,9 @@ export default function Home() {
             <Button asChild variant="outline" className="bg-gray-700 hover:bg-gray-600">
               <Link href="/blog">Read My Blog</Link>
             </Button>
-            <Button asChild variant="outline" className="bg-gray-700 hover:bg-gray-600">
+            {/* <Button asChild variant="outline" className="bg-gray-700 hover:bg-gray-600">
               <Link href="/about">About Me</Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
