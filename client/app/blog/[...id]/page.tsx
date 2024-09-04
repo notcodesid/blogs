@@ -1,6 +1,7 @@
 "use client"
 import { useBlog } from '@/app/hooks'
 import { FullBlog } from '@/components/FullBlog'
+import { SkeletonCard } from '@/components/skeleton'
 import { useParams } from 'next/navigation'
 
 export default function Page() {
@@ -14,7 +15,9 @@ export default function Page() {
   if (loading || !blog) {
     return (
       <>
-        loading...
+      <div className='mt-[120px]'>
+        <SkeletonCard />
+      </div>
       </>
     )
   }

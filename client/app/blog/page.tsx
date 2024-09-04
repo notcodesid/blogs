@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import { useRouter } from 'next/navigation';
 import { useBlogs } from "../hooks";
-import { BlogCard } from "@/components/blogCard";
+import { BlogCard } from "@/components/blogCard"
+import CircularLoader from "@/components/LoadingBar";
 
 
 export default function BlogList() {
@@ -14,7 +15,9 @@ export default function BlogList() {
   if(loading) {
     return (
       <>
-      loading
+     <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <CircularLoader size={60} percentage={75} />
+    </div>
       </>
     )
   }
