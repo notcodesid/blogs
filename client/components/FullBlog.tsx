@@ -2,8 +2,7 @@ import { Blog } from "@/app/hooks/index"
 import { ArrowLeft, CalendarDays, Clock } from "lucide-react"
 import { Button } from "./ui/button"
 import { useRouter } from 'next/navigation';
-import DotPattern from "./magicui/dot-pattern";
-import { cn } from "@/lib/utils";
+
 
 function processContent(content: string) {
   const sentences = content.split(/(?<=[.!?])\s+/);
@@ -48,9 +47,9 @@ export const FullBlog = ({ blog }: { blog: Blog }) => {
             </div>
         </article>
          
-        <DotPattern className={cn(
+        {/* <DotPattern className={cn(
   "[mask-image:radial-gradient(700px_circle_at_center,white,transparent)]",
-)} />
+)} /> */}
     </>
     )
 }

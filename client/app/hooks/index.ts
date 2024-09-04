@@ -36,13 +36,11 @@ export const useBlogs = () => {
 export const useBlog = ({ id }: { id: number }) => {
     const [loading, setLoading] = useState(true);
     const [blog, setBlog] = useState<Blog>();
-    console.log(id)
 
     useEffect(() => {
         axios.get(`${BACKEND_URL}blog/${id}`)
         .then(response => {
             setBlog(response.data.blog);
-            console.log(response.data.blog)
                 setLoading(false);
             })
             .catch(error => {
