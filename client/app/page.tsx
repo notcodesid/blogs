@@ -22,14 +22,14 @@ export default function Home() {
           </div>
           <div className="w-full max-w-sm space-y-2">
             <form className="flex space-x-2">
-              <Input
+              {/* <Input
                 className="flex h-10 w-full rounded-md border border-gray-600 bg-gray-800 px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-900 disabled:cursor-not-allowed disabled:opacity-50"
                 placeholder="Search blog posts..."
                 type="text"
               />
               <Button type="submit" className="bg-gray-700 hover:bg-gray-600">
                 Search
-              </Button>
+              </Button> */}
             </form>
           </div>
           <div className="space-x-4">
