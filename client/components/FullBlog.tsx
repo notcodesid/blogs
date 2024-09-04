@@ -5,10 +5,15 @@ import { useRouter } from 'next/navigation';
 import DotPattern from "./magicui/dot-pattern";
 import { cn } from "@/lib/utils";
 
+function processContent(content: string) {
+  const sentences = content.split(/(?<=[.!?])\s+/);
+  return sentences.join('\n\n');
+}
+
 export const FullBlog = ({ blog }: { blog: Blog }) => {
     const router = useRouter();
-
-
+    const processedContent = processContent(blog.content);
+    
     return (
         <>
         <article className="py-12 h-full bg-gray-900 text-gray-100">
@@ -36,18 +41,16 @@ export const FullBlog = ({ blog }: { blog: Blog }) => {
                     </div>
                 </header>
                 <div className="prose prose-invert">
-                    <p className="text-gray-300">
-                        {blog.content}
+                    <p className="text-gray-300 whitespace-pre-wrap">
+                        {processedContent}
                     </p>
                 </div>
             </div>
         </article>
-
-        <DotPattern
-className={cn(
+         
+        <DotPattern className={cn(
   "[mask-image:radial-gradient(700px_circle_at_center,white,transparent)]",
-)}
-/>
+)} />
     </>
     )
 }
