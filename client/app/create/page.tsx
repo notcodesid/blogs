@@ -13,6 +13,7 @@ export default function CreateBlog() {
   const [content, setContent] = useState('')
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try{
@@ -21,10 +22,9 @@ export default function CreateBlog() {
         title,
         content
       } )
-      console.log({ title, content })
-      console.log("Blog publised sussfully")
       setTitle('')
       setContent('')
+      alert("Blog added successfully")
     }
     catch(err) {
       console.log("error while publising " , err)
