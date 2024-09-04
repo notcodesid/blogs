@@ -1,7 +1,7 @@
 import { DotPattern } from "@/components/magicui/dot-pattern"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
+import { Github, Twitter } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
@@ -9,6 +9,20 @@ export default function Home() {
   return (
     <>
     <section className="w-full h-[80vh] flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100 relative">
+    <div className="absolute top-4 right-4 flex">
+        <Link href="https://x.com/notcodesid/" target="_blank" >
+          <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
+            <Twitter className="h-5 w-5" />
+            <span className="sr-only">Twitter</span>
+          </Button>
+        </Link>
+        <Link href="https://github.com/notcodesid" target="_blank">
+          <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
+            <Github className="h-5 w-5" />
+            <span className="sr-only">GitHub</span>
+          </Button>
+        </Link>
+      </div>
       
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center space-y-4 text-center">
