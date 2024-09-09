@@ -28,7 +28,7 @@ export default function Home() {
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-2">
             <h1 className="text-[#d4d4d8] text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-              Welcome to My Dev Journey
+              Welcome to My Journey
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
               Exploring code, sharing knowledge, and building the future. 
