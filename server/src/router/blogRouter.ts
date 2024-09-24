@@ -2,6 +2,7 @@ import { Hono } from 'hono';
 import { createBlogInput } from '../../models';
 import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
+import basicAuth from '../../middleware';
 
 export const blogRouter = new Hono<{
     Bindings: {
@@ -9,7 +10,8 @@ export const blogRouter = new Hono<{
     }
 }>();
 
-blogRouter.post('/', async (c) => {
+
+blogRouter.post('/', basicAuth, async (c) => {
     const body = await c.req.json();
     const { success, data } = createBlogInput.safeParse(body);
     
