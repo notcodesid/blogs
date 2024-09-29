@@ -15,7 +15,7 @@ export default function BlogList() {
   if(loading) {
     return (
       <>
-     <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+     <div className="min-h-screenflex items-center justify-center">
       <CircularLoader size={60} percentage={75} />
     </div>
       </>
@@ -23,19 +23,10 @@ export default function BlogList() {
   }
 
   return (
-    <section className="w-full h-full py-12 bg-gray-900 text-gray-100">
+    <section>
         
       <div className="container px-4 md:px-6 max-w-3xl mx-auto">
-      <Button 
-        onClick={() => router.back()}
-          variant="ghost" 
-          className="mb-4 text-gray-300 hover:bg-gray-800 hover:text-gray-100"      
-        >
-          <ArrowLeft className="mr-2 h-4 w-4"  /> Back to Home
-        </Button>
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">Latest Blog Posts</h2>
         <div className="space-y-10">
-
         {blogs.map(blog => <BlogCard
           key={blog.id}
           id={blog.id}
