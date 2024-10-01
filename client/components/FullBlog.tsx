@@ -2,6 +2,7 @@ import { Blog } from "@/app/hooks/index"
 import { ArrowLeft, CalendarDays, Clock } from "lucide-react"
 import { Button } from "./ui/button"
 import { useRouter } from 'next/navigation';
+import { Appbar } from "./appbar";
 
 
 function processContent(content: string) {
@@ -15,6 +16,7 @@ export const FullBlog = ({ blog }: { blog: Blog }) => {
     
     return (
         <>
+        <Appbar />
         <article className="py-12 h-full bg-gray-900 text-gray-100">
             <div className="container mx-auto max-w-3xl px-4">
             <Button
