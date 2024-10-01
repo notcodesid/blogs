@@ -6,8 +6,7 @@ import { Github, Twitter } from "lucide-react"
 import Link from "next/link"
 import BlogList from "./blog/page"
 import { Appbar } from "@/components/appbar"
-
-
+import BlogSuggestion from "@/components/blog-suggestion"
 
 export default function Component() {
   return (
@@ -39,9 +38,12 @@ export default function Component() {
             </div>
           </div>
 
-         {/*  */}
-         <BlogList />
+          {/* Blog list */}
+          <BlogList />
         </div>
+
+        {/* Blog Suggestion Component */}
+        <BlogSuggestion />
       </section>
     </>
   )
