@@ -15,3 +15,8 @@ model Blog {
   date        DateTime @default(now())
   readingTime Int
 }
+model Topic {
+  id          Int      @id @default(autoincrement())
+  Topic       String
+  date        DateTime @default(now())
+}
