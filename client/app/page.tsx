@@ -42,14 +42,6 @@ export default function Component() {
          {/*  */}
          <BlogList />
         </div>
-
-        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
-        <DotPattern
-          className={cn(
-            "[mask-image:radial-gradient(700px_circle_at_center,white,transparent)]",
-            "absolute inset-0 opacity-50"
-          )}
-        />
       </section>
     </>
   )

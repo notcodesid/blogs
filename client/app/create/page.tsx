@@ -2,10 +2,14 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import axios from 'axios'
 import { BACKEND_URL } from '@/config'
 import { DotPattern } from '@/components/magicui/dot-pattern'
 import { cn } from '@/lib/utils'
+
+
 
 
 export default function CreateBlog() {
