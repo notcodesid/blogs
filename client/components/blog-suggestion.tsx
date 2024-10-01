@@ -13,9 +13,12 @@ import { LightbulbIcon, XIcon } from "lucide-react"
 import axios from 'axios'
 import { BACKEND_URL } from '@/config'
 
+
 export default function BlogSuggestion() {
   const [isOpen, setIsOpen] = useState(false)
   const [suggestion, setSuggestion] = useState('')
+
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -25,9 +28,11 @@ export default function BlogSuggestion() {
           })
         setSuggestion('')
         setIsOpen(false)
+        alert("Topic has been sent")
     }
     catch(err){
         console.error(err)
+        alert("There is something wrong with the request")
     }
   }
 
@@ -69,7 +74,10 @@ export default function BlogSuggestion() {
                 className="mb-4 bg-gray-700 text-gray-100 border-gray-600 placeholder-gray-400"
                 rows={4}
               />
-              <Button type="submit" className="w-full bg-gray-700 hover:bg-gray-600 text-gray-100">
+              <Button type="submit" className="w-full bg-gray-700 hover:bg-gray-600 text-gray-100"
+              
+              
+              >
                 Send Suggestion
               </Button>
             </form>
